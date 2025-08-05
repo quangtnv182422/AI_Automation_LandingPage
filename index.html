@@ -48,6 +48,18 @@
     html {
       scroll-behavior: smooth;
     }
+    .answer {
+  transition: all 0.5s ease;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.group:hover .answer {
+  max-height: 160px; /* hoặc auto nếu bạn dùng JavaScript */
+  opacity: 1;
+}
+
   </style>
   <!-- Structured Data for Organization -->
   <script type="application/ld+json">
@@ -1301,9 +1313,9 @@
                   </div>
                   
                   <div class="p-6 pt-10 ">
-                    <h3 class="text-lg font-semibold mb-4 text-center">Mất hàng giờ gửi email nhưng không ai phản hồi?</h3>
+                    <h3 class="text-lg font-semibold mb-4 text-center group-hover:text-blue-600 cursor-pointer">Mất hàng giờ gửi email nhưng không ai phản hồi?</h3>
                     <div
-                      class="bg-blue-50 p-4 rounded-lg mt-4 transform transition-all duration-300 opacity-0 translate-y-4 absolute">
+                       class="answer bg-blue-50 p-4 rounded-lg mt-4 max-h-0 overflow-hidden opacity-0 transform transition-all duration-500 group-hover:max-h-40 group-hover:opacity-100">
                       <p class="text-blue-800">
                         AI tự động hóa soạn và gửi email theo từng đối tượng, tăng tỷ lệ mở và phản hồi lên 150%</p>
                     </div>
@@ -1324,9 +1336,9 @@
                     </svg>
                   </div>
                   <div class="p-6 pt-10">
-                    <h3 class="text-lg font-semibold mb-4 text-center">Đăng bài mạng xã hội thủ công, rời rạc và mất thời gian?</h3>
+                    <h3 class="text-lg font-semibold mb-4 text-center group-hover:text-blue-600 cursor-pointer">Đăng bài mạng xã hội thủ công, rời rạc và mất thời gian?</h3>
                     <div
-                      class="bg-blue-50 p-4 rounded-lg mt-4 transform transition-all duration-300 opacity-0 translate-y-4 absolute">
+                      class="answer bg-blue-50 p-4 rounded-lg mt-4 max-h-0 overflow-hidden opacity-0 transform transition-all duration-500 group-hover:max-h-40 group-hover:opacity-100">
                       <p class="text-blue-800">AI tự động lên lịch và đăng bài đa nền tảng mỗi ngày, giúp bạn duy trì sự hiện diện đồng nhất mà không tốn công sức.</p>
                     </div>
                   </div>
@@ -1346,9 +1358,9 @@
                     </svg>
                   </div>
                   <div class="p-6 pt-10">
-                    <h3 class="text-lg font-semibold mb-4 text-center">Khó tiếp cận khách hàng mục tiêu?</h3>
+                    <h3 class="text-lg font-semibold mb-4 text-center group-hover:text-blue-600 cursor-pointer">Khó tiếp cận khách hàng mục tiêu?</h3>
                     <div
-                      class="bg-blue-50 p-4 rounded-lg mt-4 transform transition-all duration-300 opacity-0 translate-y-4 absolute">
+                       class="answer bg-blue-50 p-4 rounded-lg mt-4 max-h-0 overflow-hidden opacity-0 transform transition-all duration-500 group-hover:max-h-40 group-hover:opacity-100">
                       <p class="text-blue-800">AI phân loại tệp khách hàng theo hành vi và tự động cá nhân hóa nội dung phù hợp – tăng khả năng tiếp cận đúng người, đúng lúc.
                       </p>
                     </div>
@@ -1366,9 +1378,9 @@
                     </svg>
                   </div>
                   <div class="p-6 pt-10">
-                    <h3 class="text-lg font-semibold mb-4 text-center">Bỏ lỡ khách hàng vì quên follow-up?</h3>
+                    <h3 class="text-lg font-semibold mb-4 text-center group-hover:text-blue-600 cursor-pointer">Bỏ lỡ khách hàng vì quên follow-up?</h3>
                     <div
-                      class="bg-blue-50 p-4 rounded-lg mt-4 transform transition-all duration-300 opacity-0 translate-y-4 absolute">
+                       class="answer bg-blue-50 p-4 rounded-lg mt-4 max-h-0 overflow-hidden opacity-0 transform transition-all duration-500 group-hover:max-h-40 group-hover:opacity-100">
                       <p class="text-blue-800">AI tự động theo dõi và follow-up khách hàng đúng thời điểm, không bỏ lỡ cơ
                         hội</p>
                     </div>
@@ -1376,7 +1388,7 @@
                 </div>
               </div>
               <div class="text-center"><a
-                  href="https://www.moraaii.com/?fbclid=IwY2xjawLzAZtleHRuA2FlbQIxMABicmlkETFreUlFd3N2RkpBVmY4SUxLAR7e9RaY3gwpyaf2kMSDGzcazor1iaV3yX6wxlHbXd3Aml00W0GBGWeAnBfCHA_aem_nhB_0vQNFt5LqF_ejJSDUA#solutions"
+                  href="#booking"
                   class="inline-flex items-center justify-center px-6 py-3 text-lg font-medium text-white bg-blue-900 rounded-full hover:bg-blue-800 shadow-lg hover:shadow-blue-500/25 transition-all duration-300">Xem
                   AI giải quyết như thế nào <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
