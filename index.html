@@ -2192,7 +2192,8 @@
                 <h2 class="text-3xl font-bold text-center mb-12">Câu hỏi thường gặp về dịch vụ tự động hóa AI</h2>
                 <div class="bg-white rounded-xl shadow-lg" data-orientation="vertical">
                   <div data-state="closed" data-orientation="vertical" class="border-b border-gray-200 last:border-0">
-                    <h3 data-orientation="vertical" data-state="closed" class="flex"><button type="button"
+                    <h3 data-orientation="vertical" data-state="closed" class="flex">
+                      <button type="button"
                         aria-controls="radix-:r1:" aria-expanded="false" data-state="closed" data-orientation="vertical"
                         id="radix-:r0:"
                         class="flex flex-1 items-center justify-between py-4 [&amp;[data-state=open]&gt;svg]:rotate-180 text-lg font-medium px-6 hover:no-underline hover:bg-gray-50 transition-colors"
@@ -2208,10 +2209,12 @@
                       data-orientation="vertical"
                       class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down px-6 pb-6 text-gray-600"
                       style="--radix-accordion-content-height: var(--radix-collapsible-content-height); --radix-accordion-content-width: var(--radix-collapsible-content-width);">
+                      Bla bla
                     </div>
                   </div>
                   <div data-state="closed" data-orientation="vertical" class="border-b border-gray-200 last:border-0">
-                    <h3 data-orientation="vertical" data-state="closed" class="flex"><button type="button"
+                    <h3 data-orientation="vertical" data-state="closed" class="flex">
+                      <button type="button"
                         aria-controls="radix-:r3:" aria-expanded="false" data-state="closed" data-orientation="vertical"
                         id="radix-:r2:"
                         class="flex flex-1 items-center justify-between py-4 [&amp;[data-state=open]&gt;svg]:rotate-180 text-lg font-medium px-6 hover:no-underline hover:bg-gray-50 transition-colors"
@@ -2227,6 +2230,7 @@
                       data-orientation="vertical"
                       class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down px-6 pb-6 text-gray-600"
                       style="--radix-accordion-content-height: var(--radix-collapsible-content-height); --radix-accordion-content-width: var(--radix-collapsible-content-width);">
+                    Bla bla
                     </div>
                   </div>
                   <div data-state="closed" data-orientation="vertical" class="border-b border-gray-200 last:border-0">
@@ -2246,6 +2250,7 @@
                       data-orientation="vertical"
                       class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down px-6 pb-6 text-gray-600"
                       style="--radix-accordion-content-height: var(--radix-collapsible-content-height); --radix-accordion-content-width: var(--radix-collapsible-content-width);">
+                    Bla bla
                     </div>
                   </div>
                   <div data-state="closed" data-orientation="vertical" class="border-b border-gray-200 last:border-0">
@@ -2265,6 +2270,7 @@
                       data-orientation="vertical"
                       class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down px-6 pb-6 text-gray-600"
                       style="--radix-accordion-content-height: var(--radix-collapsible-content-height); --radix-accordion-content-width: var(--radix-collapsible-content-width);">
+                    Bla bla
                     </div>
                   </div>
                   <div data-state="closed" data-orientation="vertical" class="border-b border-gray-200 last:border-0">
@@ -2284,6 +2290,7 @@
                       data-orientation="vertical"
                       class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down px-6 pb-6 text-gray-600"
                       style="--radix-accordion-content-height: var(--radix-collapsible-content-height); --radix-accordion-content-width: var(--radix-collapsible-content-width);">
+                   Bla bla
                     </div>
                   </div>
                   <div data-state="closed" data-orientation="vertical" class="border-b border-gray-200 last:border-0">
@@ -2303,6 +2310,7 @@
                       data-orientation="vertical"
                       class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down px-6 pb-6 text-gray-600"
                       style="--radix-accordion-content-height: var(--radix-collapsible-content-height); --radix-accordion-content-width: var(--radix-collapsible-content-width);">
+                    Bla bla
                     </div>
                   </div>
                 </div>
@@ -2571,6 +2579,35 @@
     });
 
     updateCarousel(); // Initialize on load
+  });
+</script>
+
+
+<script>
+  document.querySelectorAll('[aria-controls]').forEach(button => {
+    button.addEventListener('click', () => {
+      const contentId = button.getAttribute('aria-controls');
+      const content = document.getElementById(contentId);
+      const isOpen = button.getAttribute('aria-expanded') === 'true';
+
+      // Toggle aria-expanded
+      button.setAttribute('aria-expanded', String(!isOpen));
+      button.setAttribute('data-state', isOpen ? 'closed' : 'open');
+      content.setAttribute('data-state', isOpen ? 'closed' : 'open');
+
+      // Toggle hidden attribute
+      if (isOpen) {
+        content.setAttribute('hidden', '');
+        content.style.maxHeight = null;
+      } else {
+        content.removeAttribute('hidden');
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
+
+      // Toggle icon rotation
+      const icon = button.querySelector('svg');
+      if (icon) icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+    });
   });
 </script>
 
